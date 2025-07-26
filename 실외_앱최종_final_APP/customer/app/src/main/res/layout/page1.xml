@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:id="@+id/vw_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@id/sp_16"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="0"/>
+
+    <!-- 아이콘과 탭레이아웃 사이 공간 -->
+    <LinearLayout
+        android:id="@+id/sp_16"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="0"
+        app:layout_constraintBottom_toTopOf="@id/tab_layout"
+        app:layout_constraintTop_toBottomOf="@id/vw_1"
+        android:orientation="horizontal"/>
+    <!-- 메뉴 프레임 레이아웃 왼쪽 여백 -->
+    <LinearLayout
+        android:id="@+id/sp_18"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/sp_16"
+        app:layout_constraintBottom_toTopOf="@id/sp_17"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/menu_coffee"
+        app:layout_constraintHorizontal_weight="0"
+        android:orientation="vertical"/>
+    <!-- 메뉴 프레임 레이아웃 오른쪽 여백 -->
+    <LinearLayout
+        android:id="@+id/sp_19"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/sp_16"
+        app:layout_constraintBottom_toTopOf="@id/sp_17"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/menu_coffee"
+        app:layout_constraintHorizontal_weight="0"
+        android:orientation="vertical"/>
+    <!-- 탭 레이아웃  -->
+    <LinearLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/menu_coffee"
+        app:layout_constraintLeft_toRightOf="@id/sp_18"
+        app:layout_constraintRight_toLeftOf="@id/sp_19"
+        app:layout_constraintTop_toBottomOf="@id/sp_16"
+        app:layout_constraintVertical_weight="0"
+        android:orientation="horizontal"/>
+    <!-- 커피 프레임 레이아웃 -->
+    <FrameLayout
+        android:id="@+id/menu_coffee"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/many_shape"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/sp_17"
+        app:layout_constraintLeft_toRightOf="@id/sp_18"
+        app:layout_constraintRight_toLeftOf="@id/sp_19"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout"
+        app:layout_constraintVertical_weight="7"
+        app:layout_constraintHorizontal_weight="5">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <!-- 가장 큰 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:gravity="center" android:orientation="vertical">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="8" android:orientation="vertical">
+                        <!-- 한줄씩 메뉴를 감싸는! -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <!--  이거 한줄씩  -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="130dp"
+                                android:layout_marginTop="20dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/esfreso_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/esfre" />
+
+                                    <TextView
+                                        android:id="@+id/esfreso_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="에스프레소" />
+
+                                    <TextView
+                                        android:id="@+id/esfreso_price"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="1800원" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.2" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/americano_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/americano" />
+
+                                    <TextView
+                                        android:id="@+id/americano_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="아메리카노" />
+
+                                    <TextView
+                                        android:id="@+id/americano_price"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="2000원" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.2" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/caffelatte_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/caffelatte" />
+
+                                    <TextView
+                                        android:id="@+id/caffelatte_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="카페라떼" />
+
+                                    <TextView
+                                        android:id="@+id/caffelatte_price"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="2900원" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="130dp"
+                                android:layout_marginTop="20dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/banailla_latte_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/banilla_latte" />
+
+                                    <TextView
+                                        android:id="@+id/banailla_latte_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="순바닐라카페라떼" />
+
+                                    <TextView
+                                        android:id="@+id/banailla_latte_price"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="3600원" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.2" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/caramel_latte_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/caramel_latte" />
+
+                                    <TextView
+                                        android:id="@+id/caramel_latte_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="카라멜카페라떼" />
+
+                                    <TextView
+                                        android:id="@+id/caramel_latte_price"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="3400원" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.2" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/nut_latte_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/nut_latte" />
+
+                                    <TextView
+                                        android:id="@+id/nut_latte_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="헤이즐넛카페라떼" />
+
+                                    <TextView
+                                        android:id="@+id/nut_latte_price"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="2900원" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="130dp"
+                                android:layout_marginTop="20dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/sugar_latte_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/sugar_latte" />
+
+                                    <TextView
+                                        android:id="@+id/sugar_latte_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="연유카페라떼" />
+
+                                    <TextView
+                                        android:id="@+id/sugar_latte_price"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="3600원" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.2" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/caffe_mocca_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/caffe_mocca" />
+
+                                    <TextView
+                                        android:id="@+id/caffe_mocca_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="카페모카" />
+
+                                    <TextView
+                                        android:id="@+id/caffe_mocca_price"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="4500원" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.2" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/caramel_mocca_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/caramel_mocca" />
+
+                                    <TextView
+                                        android:id="@+id/caramel_mocca_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="카라멜카페모카" />
+
+                                    <TextView
+                                        android:id="@+id/caramel_mocca_price"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="4500원" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="130dp"
+                                android:layout_marginTop="20dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/java_mocca_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/java_mocca" />
+
+                                    <TextView
+                                        android:id="@+id/java_mocca_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="자바칩카페모카" />
+
+                                    <TextView
+                                        android:id="@+id/java_mocca_price"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="4500원" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.2" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/mint_caffe_mocca_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/mint_caffe_mocca" />
+
+                                    <TextView
+                                        android:id="@+id/mint_caffe_mocca_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="민트초코카페모카" />
+
+                                    <TextView
+                                        android:id="@+id/mint_caffe_mocca_price"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="4500원" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.2" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/caramel_makki_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/caramel_makki" />
+
+                                    <TextView
+                                        android:id="@+id/caramel_makki_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="카라멜마끼아또" />
+
+                                    <TextView
+                                        android:id="@+id/caramel_makki_price"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="3700원" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="130dp"
+                                android:layout_marginTop="20dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/caffuchino_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/cafuchino" />
+
+                                    <TextView
+                                        android:id="@+id/caffuchino_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="카푸치노" />
+
+                                    <TextView
+                                        android:id="@+id/caffuchino_price"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="4500원" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.2" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/moccapanfra_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/mocapan" />
+
+                                    <TextView
+                                        android:id="@+id/moccapanfra_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="모카팬프라페" />
+
+                                    <TextView
+                                        android:id="@+id/moccapanfra_price"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="4100원" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.2" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/mintchopan_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/mintpan" />
+
+                                    <TextView
+                                        android:id="@+id/mintchopan_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="민트초코팬프라페" />
+
+                                    <TextView
+                                        android:id="@+id/mintchopan_price"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="4100원" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="130dp"
+                                android:layout_marginTop="20dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/javapan_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/javapan" />
+
+                                    <TextView
+                                        android:id="@+id/javapan_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="자바칩팬프라페" />
+
+                                    <TextView
+                                        android:id="@+id/javapan_price"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="4100원" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.2" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/cookiepan_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/cookiepan" />
+
+                                    <TextView
+                                        android:id="@+id/cookiepan_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="쿠키앤크림팬프라페" />
+
+                                    <TextView
+                                        android:id="@+id/cookiepan_price"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="4100원" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.2" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/banilliapan_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/banillapan" />
+
+                                    <TextView
+                                        android:id="@+id/banilliapan_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="바닐라팬프라페" />
+
+                                    <TextView
+                                        android:id="@+id/banilliapan_price"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="4100원" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="130dp"
+                                android:layout_marginTop="20dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/caramelpan_image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/caramelpan" />
+
+                                    <TextView
+                                        android:id="@+id/caramelpan_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="카라멜팬프라페" />
+
+                                    <TextView
+                                        android:id="@+id/caramelpan_price"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="4100원" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.2" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.2" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="2" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"> </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+    <!-- 배버리지 프레임 레이아웃 -->
+    <!--    <FrameLayout android:id="@+id/menu_baverage" android:layout_width="@+id/tab_layout" android:layout_height="0dp" android:background="@drawable/many_shape" android:visibility="invisible" app:layout_constraintBottom_toTopOf="@id/sp_17" app:layout_constraintLeft_toRightOf="@id/sp_18" app:layout_constraintRight_toLeftOf="@id/sp_19" app:layout_constraintTop_toBottomOf="@+id/tab_layout">-->
+    <!--        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent">-->
+    <!--            &lt;!&ndash; 가장 큰 &ndash;&gt;-->
+    <!--            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:gravity="center" android:orientation="vertical">-->
+    <!--                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">-->
+    <!--                    <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="8" android:orientation="vertical">-->
+    <!--                        &lt;!&ndash; 한줄씩 메뉴를 감싸는! &ndash;&gt;-->
+    <!--                        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:orientation="vertical" android:layout_weight="1">-->
+    <!--                            &lt;!&ndash;  이거 한줄씩  &ndash;&gt;-->
+    <!--                            <LinearLayout android:layout_marginTop="20dp" android:layout_width="match_parent" android:layout_height="130dp">-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/chocolatte" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/chocolatte"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="초코라떼\n3500원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2"/>-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/javachocolatte" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/javachocolatte"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="자바칩초코라떼\n3500원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2"/>-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/mintchocolatte" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/mintchocolatte"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="민트초코라떼\n3500원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                            </LinearLayout>-->
+    <!--                            <LinearLayout android:layout_marginTop="20dp" android:layout_width="match_parent" android:layout_height="130dp">-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/sweetpotapolatte" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/sweetpotatolatte"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="자색고구마라떼\n3500원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2"/>-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/banillatte" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/banilla_latte"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="순바닐라라떼\n3500원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2"/>-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/glainlatte" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/grain"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="오!곡물라떼\n3500원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                            </LinearLayout>-->
+    <!--                            <LinearLayout android:layout_marginTop="20dp" android:layout_width="match_parent" android:layout_height="130dp">-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/greenlatte" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/greentealatte"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="그린티라떼\n3500원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2"/>-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/cookielatte" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/cookielatte"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="쿠키앤크림라떼\n3500원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2"/>-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/blueberrylatte" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/blueberrtlatte"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="딸기라떼\n3700원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                            </LinearLayout>-->
+    <!--                        </LinearLayout>-->
+    <!--                    </LinearLayout>-->
+    <!--                </LinearLayout>-->
+    <!--                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"> </LinearLayout>-->
+    <!--            </LinearLayout>-->
+    <!--        </ScrollView>-->
+    <!--    </FrameLayout>-->
+    <!--    &lt;!&ndash; 티 프레임 레이아웃 &ndash;&gt;-->
+    <!--    <FrameLayout android:id="@+id/menu_tea" android:layout_width="@+id/tab_layout" android:layout_height="0dp" android:background="@drawable/many_shape" android:visibility="visible" app:layout_constraintBottom_toTopOf="@id/sp_17" app:layout_constraintLeft_toRightOf="@id/sp_18" app:layout_constraintRight_toLeftOf="@id/sp_19" app:layout_constraintTop_toBottomOf="@+id/tab_layout">-->
+    <!--        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent">-->
+    <!--            &lt;!&ndash; 가장 큰 &ndash;&gt;-->
+    <!--            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:gravity="center" android:orientation="vertical">-->
+    <!--                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">-->
+    <!--                    <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="8" android:orientation="vertical">-->
+    <!--                        &lt;!&ndash; 한줄씩 메뉴를 감싸는! &ndash;&gt;-->
+    <!--                        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:orientation="vertical" android:layout_weight="1">-->
+    <!--                            &lt;!&ndash;  이거 한줄씩  &ndash;&gt;-->
+    <!--                            <LinearLayout android:layout_marginTop="20dp" android:layout_width="match_parent" android:layout_height="130dp">-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/icetea_image" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/icetea"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="복숭아아이스티\n2800원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2"/>-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/roisbostea_image" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/roisbostea"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="루이보스\n3200원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2"/>-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/camomile_image" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/camomile"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="캐모마일\n3200원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                            </LinearLayout>-->
+    <!--                            <LinearLayout android:layout_marginTop="20dp" android:layout_width="match_parent" android:layout_height="130dp">-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/pepermint_image" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/pepermint"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="페퍼민트\n3200원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2"/>-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/combtea_image" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/grapefruittea"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="콤부차\n4300원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2"/>-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/earlgray_image" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/earlgraytea"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="홍차\n3300원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                            </LinearLayout>-->
+    <!--                            <LinearLayout android:layout_marginTop="20dp" android:layout_width="match_parent" android:layout_height="130dp">-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/grapefruittea_image" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/grapefruittea"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="자몽차\n3500원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2"/>-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/lemontea_image" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/lemontea"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="레몬차\n3500원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2"/>-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/lemonappletea_image" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/lemonapple"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="레몬애플티\n3800원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                            </LinearLayout>-->
+    <!--                            <LinearLayout android:layout_marginTop="20dp" android:layout_width="match_parent" android:layout_height="130dp">-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/naveltea_image" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/orange"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="유자네이블티\n3800원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2"/>-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/redapple_image" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/grapefruitred"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="자몽레드애플티\n3800원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2"/>-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:visibility="invisible" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                            </LinearLayout>-->
+    <!--                        </LinearLayout>-->
+    <!--                    </LinearLayout>-->
+    <!--                </LinearLayout>-->
+    <!--                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"> </LinearLayout>-->
+    <!--            </LinearLayout>-->
+    <!--        </ScrollView>-->
+    <!--    </FrameLayout>-->
+    <!--    &lt;!&ndash; 에이드 프레임 레이아웃 &ndash;&gt;-->
+    <!--    <FrameLayout android:id="@+id/menu_ade" android:layout_width="@+id/tab_layout" android:layout_height="0dp" android:background="@drawable/many_shape" android:visibility="invisible" app:layout_constraintBottom_toTopOf="@id/sp_17" app:layout_constraintLeft_toRightOf="@id/sp_18" app:layout_constraintRight_toLeftOf="@id/sp_19" app:layout_constraintTop_toBottomOf="@+id/tab_layout">-->
+    <!--        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent">-->
+    <!--            &lt;!&ndash; 가장 큰 &ndash;&gt;-->
+    <!--            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:gravity="center" android:orientation="vertical">-->
+    <!--                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">-->
+    <!--                    <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="8" android:orientation="vertical">-->
+    <!--                        &lt;!&ndash; 한줄씩 메뉴를 감싸는! &ndash;&gt;-->
+    <!--                        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:orientation="vertical" android:layout_weight="1">-->
+    <!--                            &lt;!&ndash;  이거 한줄씩  &ndash;&gt;-->
+    <!--                            <LinearLayout android:layout_marginTop="20dp" android:layout_width="match_parent" android:layout_height="130dp">-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/grapefruitade" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/grapefruitaid"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="자몽에이드\n3500원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2"/>-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/lemonade_image" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/lemonaid"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="레몬에이드\n3500원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2"/>-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/citronade_image" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/citronaid"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="유자에이드\n3500원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                            </LinearLayout>-->
+    <!--                            <LinearLayout android:layout_marginTop="20dp" android:layout_width="match_parent" android:layout_height="130dp">-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/greengrapeade_image" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/greengrapeaid"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="청포도에이드\n3500원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2"/>-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:visibility="invisible" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2"/>-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:visibility="invisible" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                            </LinearLayout>-->
+    <!--                        </LinearLayout>-->
+    <!--                    </LinearLayout>-->
+    <!--                </LinearLayout>-->
+    <!--                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"> </LinearLayout>-->
+    <!--            </LinearLayout>-->
+    <!--        </ScrollView>-->
+    <!--    </FrameLayout>-->
+    <!--    &lt;!&ndash; 스무디 프레임 레이아웃 &ndash;&gt;-->
+    <!--    <FrameLayout android:id="@+id/menu_smoothie" android:layout_width="@+id/tab_layout" android:layout_height="0dp" android:background="@drawable/many_shape" android:visibility="invisible" app:layout_constraintBottom_toTopOf="@id/sp_17" app:layout_constraintLeft_toRightOf="@id/sp_18" app:layout_constraintRight_toLeftOf="@id/sp_19" app:layout_constraintTop_toBottomOf="@+id/tab_layout">-->
+    <!--        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent">-->
+    <!--            &lt;!&ndash; 가장 큰 &ndash;&gt;-->
+    <!--            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:gravity="center" android:orientation="vertical">-->
+    <!--                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">-->
+    <!--                    <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="8" android:orientation="vertical">-->
+    <!--                        &lt;!&ndash; 한줄씩 메뉴를 감싸는! &ndash;&gt;-->
+    <!--                        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:orientation="vertical" android:layout_weight="1">-->
+    <!--                            &lt;!&ndash;  이거 한줄씩  &ndash;&gt;-->
+    <!--                            <LinearLayout android:layout_marginTop="20dp" android:layout_width="match_parent" android:layout_height="130dp">-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/yogurt_smot_image" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/yogurtsmot"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="플레인요거트\n4500원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2"/>-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/strawsmot_image" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/strawberrrysmot"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="딸기요거트\n4500원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2"/>-->
+    <!--                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical">-->
+    <!--                                    <ImageButton android:id="@+id/blueberrysmot_image" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:background="@drawable/blueberrysmot"/>-->
+    <!--                                    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:text="블루베리요거트\n4500원" android:layout_weight="1" android:gravity="center"/>-->
+    <!--                                </LinearLayout>-->
+    <!--                            </LinearLayout>-->
+    <!--                        </LinearLayout>-->
+    <!--                    </LinearLayout>-->
+    <!--                </LinearLayout>-->
+    <!--                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"> </LinearLayout>-->
+    <!--            </LinearLayout>-->
+    <!--        </ScrollView>-->
+    <!--    </FrameLayout>-->
+    <!-- 메뉴 프레임 레이아웃과 아래 공간 여백 -->
+    <LinearLayout android:id="@+id/sp_17" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintVertical_weight="0" app:layout_constraintTop_toBottomOf="@id/menu_coffee" app:layout_constraintBottom_toBottomOf="parent" android:orientation="vertical"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

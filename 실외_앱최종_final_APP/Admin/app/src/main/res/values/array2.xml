@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array2">
+        <item>배달지역아님</item>
+        <item>배달지연</item>
+    </string-array>
+</resources>

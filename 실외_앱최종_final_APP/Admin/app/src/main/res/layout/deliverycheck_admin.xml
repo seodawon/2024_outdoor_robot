@@ -1,0 +1,335 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background">
+    <!--맨 위 아이콘-->
+    <LinearLayout
+        android:id="@+id/main_icon"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/sp_1"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/back_icon"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back_icon"
+            android:padding="1dp"
+            android:layout_weight="1"
+            />
+        <!--학교 로고-->
+        <ImageView
+            android:id="@+id/idu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/idu"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="관리자용"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:gravity="bottom"
+
+            android:textColor="#853347"/>
+        <!--학교로고와 유저아이콘 사이 여백-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3" />
+    </LinearLayout>
+    <!--    상단여백-->
+    <View
+        android:id="@+id/sp_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/main_icon"
+        app:layout_constraintBottom_toTopOf="@id/sp_3"
+        app:layout_constraintVertical_weight="0.5"
+        />
+
+    <View
+        android:id="@+id/sp_3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/sp_1"
+        app:layout_constraintBottom_toTopOf="@id/history_text"
+        app:layout_constraintVertical_weight="0.2"
+        android:background="#6B182A"
+        />
+    <!--주문내역 텍스트-->
+    <TextView
+        android:id="@+id/history_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        android:text="배달 내역"
+        app:layout_constraintTop_toBottomOf="@id/sp_3"
+        app:layout_constraintBottom_toTopOf="@id/sp_4"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:gravity="center|center"
+        />
+
+    <!--    하단여백-->
+    <View
+        android:id="@+id/sp_4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/history_text"
+        app:layout_constraintBottom_toTopOf="@id/sp_5"
+        app:layout_constraintVertical_weight="0.2"
+        android:background="#6B182A"
+        />
+    <Spinner
+        android:id="@+id/sp_5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/sp_4"
+        app:layout_constraintBottom_toTopOf="@id/scorll"
+        app:layout_constraintVertical_weight="0.5"
+        android:entries="@array/array3"
+        />
+
+
+    <ScrollView
+        android:id="@+id/scorll"
+        app:layout_constraintTop_toBottomOf="@id/sp_5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="8"
+        >
+
+
+        <!--            한뭉치-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/orderlist_item"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            >
+            <!-- 버튼배경-->
+            <ImageButton
+                android:visibility="visible"
+                android:id="@+id/orderlist_item_button"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:layout_constraintTop_toTopOf="@id/orderlist_item"
+                app:layout_constraintBottom_toBottomOf="@id/orderlist_item"
+                android:background="@drawable/rectangle"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                />
+            <!--                메뉴명-->
+            <TextView
+                android:id="@+id/menu_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@id/orderlist_item_button"
+                app:layout_constraintRight_toLeftOf="@id/agree_button"
+                app:layout_constraintTop_toTopOf="@id/orderlist_item_button"
+                app:layout_constraintBottom_toBottomOf="@id/orderlist_item_button"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                app:layout_constraintVertical_bias="0.1"
+                android:text="매장지점 :"
+                android:textSize="22sp"/>
+            <TextView
+                android:id="@+id/menu_text2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@id/orderlist_item_button"
+                app:layout_constraintRight_toLeftOf="@id/agree_button"
+                app:layout_constraintTop_toTopOf="@id/orderlist_item_button"
+                app:layout_constraintBottom_toBottomOf="@id/orderlist_item_button"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:gravity="left"
+                app:layout_constraintVertical_bias="0.1"
+                android:text="배송지점 :"
+                android:textSize="22sp"/>
+            <!--                수락버튼-->
+            <android.widget.Button
+                android:visibility="invisible"
+                android:id="@+id/agree_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button"
+                app:layout_constraintRight_toLeftOf="@id/agree_refuse_sp1"
+                app:layout_constraintLeft_toRightOf="@id/menu_text"
+                app:layout_constraintTop_toTopOf="@id/orderlist_item_button"
+                app:layout_constraintBottom_toBottomOf="@id/orderlist_item_button"
+                app:layout_constraintHorizontal_weight="0.5"
+                app:layout_constraintVertical_bias="0.8"
+                android:text="수락"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp"
+                />
+
+            <View
+                android:id="@+id/agree_refuse_sp1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintHorizontal_weight="0.2"
+                app:layout_constraintRight_toLeftOf="@id/refuse_button"
+                app:layout_constraintLeft_toRightOf="@id/agree_button"
+                />
+            <!--                거절버튼-->
+            <android.widget.Button
+                android:visibility="invisible"
+                android:id="@+id/refuse_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button"
+                android:layout_marginRight="10dp"
+                app:layout_constraintLeft_toRightOf="@id/agree_refuse_sp1"
+                app:layout_constraintTop_toTopOf="@id/orderlist_item_button"
+                app:layout_constraintRight_toRightOf="@id/orderlist_item_button"
+                app:layout_constraintBottom_toBottomOf="@id/orderlist_item_button"
+                app:layout_constraintHorizontal_weight="0.5"
+                app:layout_constraintVertical_bias="0.8"
+                android:text="거절"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp"
+                />
+            <!--                배달요청버튼-->
+            <android.widget.Button
+                android:visibility="invisible"
+                android:id="@+id/deliveryRequest_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                app:layout_constraintLeft_toRightOf="@id/menu_text"
+                app:layout_constraintTop_toTopOf="@id/orderlist_item_button"
+                app:layout_constraintRight_toRightOf="@id/orderlist_item_button"
+                app:layout_constraintBottom_toBottomOf="@id/orderlist_item_button"
+                app:layout_constraintVertical_bias="0.8"
+                android:background="@drawable/button"
+                app:layout_constraintHorizontal_weight="2"
+                android:text="배달요청"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp"
+                />
+            예상시간선택-->
+            <Spinner
+                android:id="@+id/card"
+                android:visibility="invisible"
+                android:spinnerMode="dropdown"
+                android:background="@drawable/spinner_background"
+                android:layout_width="150dp"
+                android:layout_marginRight="90dp"
+                app:layout_constraintTop_toTopOf="@id/orderlist_item_button"
+                app:layout_constraintRight_toRightOf="@id/orderlist_item_button"
+                app:layout_constraintBottom_toBottomOf="@id/orderlist_item_button"
+                app:layout_constraintVertical_bias="0.75"
+                android:layout_height="match_parent"
+                android:layout_weight="3.5"
+                android:entries="@array/my_array" />
+            <android.widget.Button
+                android:visibility="invisible"
+                android:id="@+id/confirm_button1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button"
+                android:layout_marginRight="10dp"
+                app:layout_constraintLeft_toRightOf="@id/agree_refuse_sp1"
+                app:layout_constraintTop_toTopOf="@id/orderlist_item_button"
+                app:layout_constraintRight_toRightOf="@id/orderlist_item_button"
+                app:layout_constraintBottom_toBottomOf="@id/orderlist_item_button"
+                app:layout_constraintHorizontal_weight="0.5"
+                app:layout_constraintVertical_bias="0.8"
+                android:text="확인"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp"
+                />
+            거절사유선택-->
+            <Spinner
+                android:id="@+id/card2"
+                android:visibility="invisible"
+                android:spinnerMode="dropdown"
+                android:background="@drawable/spinner_background"
+                android:layout_width="150dp"
+                android:layout_marginRight="90dp"
+                app:layout_constraintTop_toTopOf="@id/orderlist_item_button"
+                app:layout_constraintRight_toRightOf="@id/orderlist_item_button"
+                app:layout_constraintBottom_toBottomOf="@id/orderlist_item_button"
+                app:layout_constraintVertical_bias="0.75"
+                android:layout_height="match_parent"
+                android:layout_weight="3.5"
+                android:entries="@array/array2" />
+            확인버튼-->
+            <android.widget.Button
+                android:visibility="invisible"
+                android:id="@+id/confirm_button2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button"
+                android:layout_marginRight="10dp"
+                app:layout_constraintLeft_toRightOf="@id/agree_refuse_sp1"
+                app:layout_constraintTop_toTopOf="@id/orderlist_item_button"
+                app:layout_constraintRight_toRightOf="@id/orderlist_item_button"
+                app:layout_constraintBottom_toBottomOf="@id/orderlist_item_button"
+                app:layout_constraintHorizontal_weight="0.5"
+                app:layout_constraintVertical_bias="0.8"
+                android:text="확인"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp"
+                />
+
+            <!--배달요청된버튼-->
+            <android.widget.Button
+                android:visibility="invisible"
+                android:id="@+id/deliveryRequested_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                app:layout_constraintLeft_toRightOf="@id/menu_text"
+                app:layout_constraintTop_toTopOf="@id/orderlist_item_button"
+                app:layout_constraintRight_toRightOf="@id/orderlist_item_button"
+                app:layout_constraintBottom_toBottomOf="@id/orderlist_item_button"
+                app:layout_constraintVertical_bias="0.8"
+                app:layout_constraintHorizontal_weight="1"
+                android:background="@drawable/complete_button"
+                android:text="배달요청됨"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp"
+                />
+
+            <!--배달거절버튼-->
+            <android.widget.Button
+                android:visibility="visible"
+                android:id="@+id/refused_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                app:layout_constraintLeft_toRightOf="@id/menu_text"
+                app:layout_constraintTop_toTopOf="@id/orderlist_item_button"
+                app:layout_constraintRight_toRightOf="@id/orderlist_item_button"
+                app:layout_constraintBottom_toBottomOf="@id/orderlist_item_button"
+                app:layout_constraintVertical_bias="0.8"
+                app:layout_constraintHorizontal_weight="1"
+                android:background="@drawable/complete_button"
+                android:text="배달거절됨"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

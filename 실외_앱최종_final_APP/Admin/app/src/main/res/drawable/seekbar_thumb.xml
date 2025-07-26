@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:width="20dp" android:height="20dp"/> <!-- 너비 및 높이 설정 -->
+    <solid android:color="#CCCCCC"/> <!-- 회색 색상 설정 -->
+    <corners android:radius="10dp"/> <!-- 반지름을 절반으로 설정하여 둥글게 만듭니다 -->
+</shape>

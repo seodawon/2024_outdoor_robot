@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">customer</string>
+<string name="app_btn_login">로그인</string>
+<string name="app_Go_market">매장용 로그인창으로 이동</string>
+<string name="app_Go_manager">관리자용 로그인창으로 이동</string>
+<string name="app_btn_back">뒤로가기 버튼</string>
+<string name="app_location_bluepot">인덕대학교 연지스퀘어 B1층</string>
+<string name="app_location_1847">인덕대학교 학술정보센터 1층</string>
+<string name="app_Go_menu_bluepot">블루포트 메뉴가기</string>
+<string name="app_Go_menu_1847">1847 메뉴가기</string>
+
+<string name="app_Go_tab_coffee">Coffee</string>
+<string name="app_Go_tab_baverage">Baverage</string>
+<string name="app_Go_tab_signature">Signature</string>
+<string name="app_Go_tab_bakery">Bakery</string>
+</resources>

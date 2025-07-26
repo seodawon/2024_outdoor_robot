@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="floor_array">
+    <item>COFFEE</item>
+    <item>BAVERAGE</item>
+    <item>ADE</item>
+    <item>TEA</item>
+    <item>SMOOTHIE</item>
+</string-array>
+
+</resources>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/top1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintVertical_weight="0.1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/top2">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/start"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1.6"
+            android:background="@drawable/shape1234"
+            android:text="정지"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/control"
+            app:layout_constraintRight_toLeftOf="@+id/start"
+            app:layout_constraintLeft_toRightOf="@+id/text"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="10dp"
+            android:text="수동제어"
+            android:background="@drawable/shape1234"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:layout_width="0dp"
+            android:layout_weight="1.6"
+            android:layout_height="match_parent"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bluetooth"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1.75"
+            android:background="@drawable/rounded_button"
+            android:text="bluetooth"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/top2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintVertical_weight="0.1"
+        app:layout_constraintTop_toBottomOf="@+id/top1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/top3">
+        <TextView
+            android:id="@+id/LS"
+            app:layout_constraintRight_toLeftOf="@+id/space1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="15dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.75"
+            android:background="@drawable/border_background"
+            android:text=" LS:"
+            android:textSize="50dp"/>
+        <TextView
+            android:id="@+id/space1"
+            app:layout_constraintLeft_toRightOf="@+id/LS"
+            app:layout_constraintRight_toLeftOf="@+id/RS"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.75"/>
+        <TextView
+            android:id="@+id/RS"
+            app:layout_constraintRight_toLeftOf="@+id/space1"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="15dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.75"
+            android:background="@drawable/border_background"
+            android:text=" RS:"
+            android:textSize="50dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/top3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintVertical_weight="0.8"
+        app:layout_constraintTop_toBottomOf="@+id/top2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+            <LinearLayout
+                android:id="@+id/seekLayout1"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="0.2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/space2">
+                <SeekBar
+                    android:id="@+id/seekBar1"
+                    android:layout_width="600dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start|center_vertical"
+                    android:translationX="-260dp"
+                    android:max="1000"
+                    android:min="-1000"
+                    android:progress="0"
+                    android:rotation="270"
+                    android:splitTrack="true"
+                    android:thumb="@drawable/seekbar_thumb" />
+            </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/space2"
+            app:layout_constraintLeft_toRightOf="@+id/seekLayout1"
+            app:layout_constraintRight_toLeftOf="@+id/seekLayout2"
+            android:orientation="horizontal"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="200dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text=" L1:"
+                    android:background="@drawable/border_background"
+                    android:textSize="50dp" />
+                <TextView
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="200dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_background"
+                    android:text=" L2:"
+                    android:textSize="50dp" />
+                <TextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="200dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text=" R1:"
+                    android:background="@drawable/border_background"
+                    android:textSize="50dp" />
+                <TextView
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="200dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_background"
+                    android:text=" R2:"
+                    android:textSize="50dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/seekLayout2"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                app:layout_constraintLeft_toRightOf="@+id/space2"
+                app:layout_constraintRight_toRightOf="parent">
+                <SeekBar
+                        android:id="@+id/seekBar2"
+                        android:max="1000"
+                        android:min="-1000"
+                        android:progress="0"
+                        android:layout_width="600dp"
+                        android:layout_height="match_parent"
+                        android:translationX="-260dp"
+                        android:layout_gravity="start|center_vertical"
+                        android:rotation="270"
+                        android:thumb="@drawable/seekbar_thumb"
+                        android:splitTrack="true" />
+            </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

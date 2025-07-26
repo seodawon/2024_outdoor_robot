@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array2">
+        <item>재료소진</item>
+        <item>주문지연</item>
+        <item>영업 중 아님</item>
+    </string-array>
+</resources>

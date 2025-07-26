@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="address_array">
+        <item> </item>
+        <item>인관</item>
+        <item>2공학관</item>
+        <item>1공학관</item>
+        <item>덕관</item>
+        <item>운동장</item>
+        <item>도서관</item>
+        <item>은봉관</item>
+        <item>연지스퀘어</item>
+    </string-array>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array4">
+        <item>로봇1</item>
+        <item>로봇2</item>
+        <item>로봇3</item>
+        <item>로봇4</item>
+    </string-array>
+</resources>

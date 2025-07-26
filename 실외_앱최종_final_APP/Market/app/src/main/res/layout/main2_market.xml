@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".main_Market">
+
+    <!--맨 위 아이콘 셋-->
+    <LinearLayout
+        android:id="@+id/vw_5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/vw_8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1">
+        <!--학교 로고-->
+        <ImageView
+            android:id="@+id/idu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:contentDescription="매장용 로그인 이동"
+
+            android:scaleType="fitCenter"
+            android:src="@drawable/idu"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="2dp"
+            app:layout_constraintVertical_weight="1"
+            android:layout_weight="1"/>
+        <!--학교로고와 관리자 아이콘 사이 여백-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_weight="3"
+            />
+        <!--관리자아이콘 버튼-->
+        <ImageButton
+            android:id="@+id/manager"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:padding="1dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/manager"
+            android:layout_weight="1"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            />
+    </LinearLayout>
+    <!--맨 위 아이콘과 빨간 선 사이 여백-->
+    <LinearLayout
+        android:id="@+id/vw_8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/vw_5"
+        app:layout_constraintBottom_toTopOf="@id/vw_1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_weight="1.5"
+        android:orientation="horizontal"
+        />
+    <!--위쪽 빨간 뷰-->
+    <View
+        android:id="@+id/vw_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#992A42"
+        app:layout_constraintBottom_toTopOf="@+id/vw_2"
+        app:layout_constraintTop_toBottomOf="@+id/vw_8"
+        app:layout_constraintVertical_weight="1" />
+    <!--고성 박힌 텍스트뷰-->
+    <TextView
+        android:id="@+id/vw_2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:text="Go Sung"
+        android:textColor="#992A42"
+        android:textSize="40pt"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/vw_3"
+        app:layout_constraintTop_toBottomOf="@+id/vw_1"
+        app:layout_constraintVertical_weight="2" />
+    <!--아래쪽 빨간 뷰-->
+    <View
+        android:id="@+id/vw_3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#992A42"
+        app:layout_constraintTop_toBottomOf="@+id/vw_2"
+        app:layout_constraintBottom_toTopOf="@id/vw_4"
+        app:layout_constraintVertical_weight="1"/>
+    <!--아래 빨간 뷰와 로그인 위쪽 여백-->
+    <LinearLayout
+        android:id="@+id/vw_4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/vw_3"
+        app:layout_constraintBottom_toBottomOf="@id/vw_6"
+        app:layout_constraintVertical_weight="1"
+
+        >
+    </LinearLayout>
+    <!--로그인버튼이 있는 여백-->
+    <LinearLayout
+        android:id="@+id/vw_6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/vw_4"
+        app:layout_constraintBottom_toTopOf="@id/vw_7"
+        app:layout_constraintVertical_weight="1"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        >
+        <!--로그인 버튼 왼쪽 여백-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            />
+        <!--로그인 버튼-->
+        <!--로그인 버튼 오른쪽 여백-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            />
+    </LinearLayout>
+    <!--로그인 버튼과 아래쪽 여백-->
+    <LinearLayout
+        android:id="@+id/vw_7"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/vw_6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_weight="1"
+        android:orientation="horizontal"
+        >
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

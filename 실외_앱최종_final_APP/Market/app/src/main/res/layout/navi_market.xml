@@ -1,0 +1,74 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context=".test">
+
+    <RelativeLayout android:id="@+id/map_view" android:layout_width="match_parent"
+        android:layout_height="match_parent" app:layout_collapseMode="pin"/>
+    <!--  Main content  -->
+    <!--  Bottom sheet  -->
+    <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@+id/collapsingToolbarLayout01" android:layout_width="match_parent" android:layout_height="300dp" app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior" android:fitsSystemWindows="true" app:contentScrim="?attr/colorPrimary" app:expandedTitleMarginEnd="64dp" app:expandedTitleMarginStart="48dp" app:layout_scrollFlags="scroll|exitUntilCollapsed">
+        <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+            <LinearLayout android:id="@+id/bottom_sheet" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="350dp" android:orientation="vertical" android:background="@drawable/background">
+                <!--  Bottom sheet content goes here  -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.1" android:orientation="horizontal">
+                    <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+                    <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:src="@drawable/arrow" android:layout_weight="1"/>
+                    <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="8" android:layout_marginTop="10dp" android:orientation="vertical">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                        <TextView android:layout_width="0dp" android:layout_height="match_parent" android:gravity="left|center" android:text="오후 몇시 몇분 도착 예정\n주문하신 메뉴를 배달 중이에요" android:textStyle="bold" android:textColor="#000000" android:textSize="30dp" android:layout_weight="8"/>
+                        <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2" android:src="@drawable/micle_brocolree"/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="7" android:src="@drawable/step3"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!--        <LinearLayout -->
+            <!--             android:layout_width="match_parent" -->
+            <!--             android:layout_height="match_parent" -->
+            <!--             -->
+            <!--             android:orientation="horizontal"/> -->
+        </androidx.core.widget.NestedScrollView>
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <!-- <androidx.constraintlayout.widget.ConstraintLayout -->
+    <!--     xmlns:android="http://schemas.android.com/apk/res/android" -->
+    <!--     xmlns:app="http://schemas.android.com/apk/res-auto" -->
+    <!--     xmlns:tools="http://schemas.android.com/tools" -->
+    <!--     android:layout_width="match_parent" android:layout_height="match_parent" -->
+    <!--     tools:context=".MainActivity"> -->
+    <!--     <LinearLayout -->
+    <!--         app:layout_constraintTop_toTopOf="parent" -->
+    <!--         app:layout_constraintBottom_toBottomOf="parent" -->
+    <!--         android:layout_width="match_parent" -->
+    <!--         android:layout_height="match_parent" -->
+    <!--         android:background="#FFFFFF"> -->
+    <!--         <RelativeLayout -->
+    <!--             android:id="@+id/map_view" -->
+    <!--             android:layout_width="match_parent" -->
+    <!--             android:layout_height="match_parent" -->
+    <!--             /> -->
+    <!--     </LinearLayout> -->
+    <!--     <LinearLayout -->
+    <!--         android:orientation="vertical" -->
+    <!--         android:id="@+id/content" -->
+    <!--         android:layout_width="match_parent" -->
+    <!--         android:layout_height="600dp" -->
+    <!--         android:layout_marginTop="650dp" -->
+    <!--         android:background="@drawable/background" -->
+    <!--         app:layout_constraintTop_toTopOf="parent" -->
+    <!--         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"> -->
+    <!--         > -->
+    <!--     <Button -->
+    <!--         android:id="@+id/drawer" -->
+    <!--         android:layout_width="120dp" -->
+    <!--         android:layout_height="20dp" -->
+    <!--         android:layout_gravity="center_horizontal" -->
+    <!--         android:layout_marginTop="12dp" -->
+    <!--         android:background="@drawable/background"> -->
+    <!--     </Button> -->
+    <!--     </LinearLayout> -->
+    <!-- </androidx.constraintlayout.widget.ConstraintLayout> -->

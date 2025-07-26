@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+    <LinearLayout
+        android:id="@+id/vw_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/vw_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1">
+        <!-- 뒤로 가기 아이콘 -->
+        <ImageButton
+            android:id="@+id/back_icon"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back_icon"
+            android:padding="1dp"
+            android:layout_weight="1"/>
+        <!-- 학교 로고 -->
+        <ImageView
+            android:id="@+id/idu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/idu"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"/>
+        <!-- 학교로고와 유저아이콘 사이 여백 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"/>
+        <!-- 유저아이콘 -->
+        <ImageButton
+            android:id="@+id/delivery"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:contentDescription="유저정보"
+            android:padding="1dp"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/bag"
+            android:background="@drawable/asd"
+            android:layout_weight="1"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"/>
+        <!-- 장바구니아이콘 -->
+        <ImageButton
+            android:id="@+id/bag"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:contentDescription="장바구니"
+            android:padding="1dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/user"
+            android:src="@drawable/jump"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"/>
+    </LinearLayout>
+    <!-- 맨위와 블루포트 사이 여백 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/vw_2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bluepot_choice"
+        app:layout_constraintTop_toBottomOf="@id/vw_1"
+        app:layout_constraintVertical_weight="1"/>
+    <!-- 블루포트 오른쪽 여백 -->
+    <LinearLayout
+        android:id="@+id/vw_9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/vw_2"
+        app:layout_constraintLeft_toRightOf="@id/bluepot_choice"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/vw_3"
+        app:layout_constraintHorizontal_weight="0.5"
+        android:orientation="horizontal"/>
+    <!-- 블루포트 왼쪽 여백 -->
+    <LinearLayout
+        android:id="@+id/vw_10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/vw_2"
+        app:layout_constraintRight_toLeftOf="@id/bluepot_choice"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/vw_3"
+        app:layout_constraintHorizontal_weight="0.5"
+        android:orientation="horizontal"/>
+    <!-- 블루포트 버튼 -->
+    <ImageButton
+        android:id="@+id/bluepot_choice"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/coffe_shape"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bluepot"
+        app:layout_constraintTop_toBottomOf="@id/vw_2"
+        app:layout_constraintLeft_toRightOf="@id/vw_10"
+        app:layout_constraintRight_toLeftOf="@id/vw_9"
+        app:layout_constraintBottom_toTopOf="@id/vw_3"
+        app:layout_constraintVertical_weight="3.5"
+        app:layout_constraintHorizontal_weight="4"/>
+    <!-- 블루포트 주소 텍스트뷰 -->
+    <TextView
+        android:id="@+id/bluepot_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="인덕대학교 연지스퀘어 B1층"
+        android:textColor="#7F7F7F"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/bluepot_choice"
+        app:layout_constraintTop_toTopOf="@id/bluepot_choice"
+        app:layout_constraintRight_toRightOf="@id/bluepot_choice"
+        app:layout_constraintBottom_toBottomOf="@id/bluepot_choice"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintVertical_bias="0.8"/>
+    <!-- 블루포트 1847사이 여백 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/vw_3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/cafe_choice"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bluepot_choice"
+        app:layout_constraintVertical_weight="1"/>
+    <!-- 1847 오른쪽 여백 -->
+    <LinearLayout
+        android:id="@+id/vw_11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/vw_3"
+        app:layout_constraintLeft_toRightOf="@id/bluepot_choice"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/vw_4"
+        app:layout_constraintHorizontal_weight="0.5"
+        android:orientation="horizontal"/>
+    <!-- 1847 버튼 -->
+    <ImageButton
+        android:id="@+id/cafe_choice"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:src="@drawable/coffe"
+        app:layout_constraintBottom_toTopOf="@id/vw_4"
+        app:layout_constraintLeft_toRightOf="@id/vw_12"
+        app:layout_constraintRight_toLeftOf="@id/vw_11"
+        app:layout_constraintTop_toBottomOf="@id/vw_3"
+        android:background="@drawable/bluepot_shape"
+        app:layout_constraintVertical_weight="3.5"
+        app:layout_constraintHorizontal_weight="4"/>
+    <!-- 1847 왼쪽 여백 -->
+    <LinearLayout
+        android:id="@+id/vw_12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/vw_3"
+        app:layout_constraintRight_toLeftOf="@id/bluepot_choice"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/vw_4"
+        app:layout_constraintHorizontal_weight="1"
+        android:orientation="horizontal"/>
+    <!-- 1847 주소 텍스트뷰 -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="인덕대학교 학술정보센터 1층"
+        android:textColor="#7F7F7F"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/cafe_choice"
+        app:layout_constraintTop_toTopOf="@id/cafe_choice"
+        app:layout_constraintRight_toRightOf="@id/cafe_choice"
+        app:layout_constraintBottom_toBottomOf="@id/cafe_choice"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintVertical_bias="0.8"/>
+    <!-- 1847 아래 여백 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/vw_4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cafe_choice"
+        app:layout_constraintVertical_weight="1"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

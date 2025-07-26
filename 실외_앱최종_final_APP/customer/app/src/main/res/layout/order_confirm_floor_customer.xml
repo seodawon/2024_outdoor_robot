@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+
+    <ImageButton
+        android:id="@+id/bagbag"
+        android:visibility="invisible"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="장바구니"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bagbag"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="2dp"/>
+
+
+    <FrameLayout
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/many_shape"
+        app:layout_constraintHeight_percent="0.8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5">
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="#853347"
+                android:text="주문확인"
+                android:textColor="#FFFFFF"
+                android:textSize="15pt"
+                android:gravity="center"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="right">
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:background="#853347"
+            android:gravity="center">
+            <android.widget.Button
+                android:id="@+id/order"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:text="결제하기"
+                android:textColor="#000000"
+                android:textSize="12pt"
+                android:textStyle="bold"
+                android:background="#FFFFFF"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+        <ListView
+            android:id="@+id/confirm_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/linear1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="80dp"
+            app:layout_constraintBottom_toTopOf="@+id/linear2"/>
+
+    </FrameLayout>
+
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/app_btn_back"
+        android:padding="1dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="48dp"
+        android:contentDescription="@string/app_Go_market"
+        android:scaleType="fitCenter"
+        android:src="@drawable/idu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

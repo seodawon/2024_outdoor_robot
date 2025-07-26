@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1.4"
+        android:id="@+id/top2"
+        android:layout_height="0dp">
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="1dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/zxc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/imageView4"/>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/imageButton4"
+            android:layout_marginStart="53dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/idu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/v2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView18"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintVertical_weight="3.8"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="이름"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="24dp"
+                android:layout_weight="3"
+                android:layout_marginLeft="20dp"
+                />
+            <TextView
+                android:id="@+id/nameText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="이름"
+                android:textSize="24dp"
+                android:layout_weight="8"
+                android:layout_marginRight="50dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <TextView
+                android:id="@+id/textViewId"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="아이디"
+                android:textSize="24dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="3"/>
+
+
+            <TextView
+                android:id="@+id/idText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="아이디"
+                android:textSize="24dp"
+                android:layout_weight="8"
+                android:layout_marginRight="50dp"
+
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintBottom_toTopOf="@+id/imageView18"
+        app:layout_constraintVertical_weight="0.3"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+
+
+
+
+
+    <View
+        android:id="@+id/e1"
+        android:layout_width="@+id/imageView18"
+        android:layout_height="0dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView18"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView18"
+        app:layout_constraintRight_toRightOf="@+id/imageView18"
+        app:layout_constraintTop_toTopOf="@+id/imageView18" />
+
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/jump"
+        app:layout_constraintHorizontal_weight="1.23"
+        app:layout_constraintBottom_toTopOf="@id/v2"
+        app:layout_constraintLeft_toRightOf="@id/vv1"
+        app:layout_constraintRight_toLeftOf="@id/vv2"
+        app:layout_constraintTop_toBottomOf="@+id/cv"
+        app:layout_constraintVertical_weight="1.9" />
+
+
+    <View
+        android:id="@+id/vv1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/imageView18"
+        app:layout_constraintTop_toTopOf="@id/imageView18"
+        app:layout_constraintBottom_toBottomOf="@id/imageView18"
+
+
+
+        />
+
+
+    <View
+        android:id="@+id/vv2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/imageView18"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageView18"
+        app:layout_constraintBottom_toBottomOf="@id/imageView18"
+        />
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="내 정보"
+        android:background="#992A42"
+        android:textColor="#FFFFFF"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/cv"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toRightOf="@id/a"
+        app:layout_constraintRight_toLeftOf="@id/a1"
+        app:layout_constraintTop_toBottomOf="@id/top2"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintVertical_weight="0.7"/>
+
+
+    <View
+        android:id="@+id/a"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:background="#853347"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintRight_toLeftOf="@+id/textView14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView14"
+        app:layout_constraintBottom_toBottomOf="@+id/textView14"
+        />
+    <View
+        android:id="@+id/a1"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:background="#853347"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/textView14"
+        app:layout_constraintTop_toTopOf="@+id/textView14"
+        app:layout_constraintBottom_toBottomOf="@+id/textView14"
+        app:layout_constraintRight_toRightOf="parent"
+
+
+
+
+        />
+
+
+    <android.widget.Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#CF7488"
+        android:text="비밀번호 재설정"
+        android:textColor="#FFFFFF"
+        android:textSize="24dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintVertical_weight="0.6"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintTop_toBottomOf="@id/v2"
+        app:layout_constraintBottom_toTopOf="@+id/button9"
+        app:layout_constraintLeft_toRightOf="@id/vc1"
+        app:layout_constraintRight_toLeftOf="@id/vc2"
+        />
+
+
+
+    <View
+        android:id="@+id/vc1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toBottomOf="@+id/button2"
+
+
+
+        />
+
+
+    <View
+        android:id="@+id/vc2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/button2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toBottomOf="@+id/button2"
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+    <View
+        android:id="@+id/pay1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintRight_toLeftOf="@+id/button9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button9"
+        app:layout_constraintBottom_toBottomOf="@+id/button9"
+        />
+    <View
+        android:id="@+id/pay2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/button9"
+        app:layout_constraintTop_toTopOf="@+id/button9"
+        app:layout_constraintBottom_toBottomOf="@+id/button9"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+
+
+
+
+
+
+
+
+    <android.widget.Button
+        android:id="@+id/button9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#CF7488"
+        android:textSize="36dp"
+        android:text="로그아웃"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:gravity="center"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/pay1"
+        app:layout_constraintRight_toLeftOf="@id/pay2"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintVertical_weight="0.7"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/c"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:background="#853347"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.86"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

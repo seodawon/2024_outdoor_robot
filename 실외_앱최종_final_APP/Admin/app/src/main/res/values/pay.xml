@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="결제">
+        <item>신한</item>
+        <item>국민</item>
+        <item>농협</item>
+        <item>기업</item>
+    </string-array>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array3">
+        <item>전체</item>
+        <item>진행중</item>
+        <item>거절</item>
+        <item>완료</item>
+    </string-array>
+</resources>

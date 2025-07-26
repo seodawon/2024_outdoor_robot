@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/blank"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="0.1"
+        app:layout_constraintBottom_toTopOf="@id/confirm"
+        app:layout_constraintTop_toBottomOf="@id/top2"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/confirm"
+        app:layout_constraintTop_toBottomOf="@id/blank"
+        app:layout_constraintBottom_toTopOf="@id/blank_forth"
+        android:visibility="visible"
+        app:layout_constraintVertical_weight="8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/many_shape"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/top3"
+            app:layout_constraintTop_toTopOf="@id/confirm"
+            android:layout_height="0dp"
+            app:layout_constraintVertical_weight="2">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#853347"
+                android:text="장바구니"
+                android:textColor="#FFFFFF"
+                android:textSize="15pt"
+                android:gravity="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/top6"
+            app:layout_constraintTop_toTopOf="@id/confirm"
+            android:layout_height="0dp"
+            app:layout_constraintVertical_weight="2"
+            android:gravity="right"
+            android:orientation="horizontal">
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/top4"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            app:layout_constraintTop_toBottomOf="@id/top5"
+            android:background="#853347"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/confirm">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="0.5"/>
+            <android.widget.Button
+                android:id="@+id/orderbutton"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:text="주문하기"
+                android:textColor="#000000"
+                android:layout_marginTop="10dp"
+                android:textSize="12pt"
+                android:textStyle="bold"
+                android:background="#FFFFFF"
+                android:layout_weight="3"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="0.5"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/top5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom"
+            app:layout_constraintBottom_toTopOf="@id/top4"
+            app:layout_constraintTop_toBottomOf="@id/top3"
+            tools:layout_editor_absoluteX="45dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/linearlayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/esfre" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="6"
+                                    android:layout_marginBottom="5dp"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="0dp"
+                                        android:text="에스프레소\n1800원\n"
+                                        android:textColor="#000000"
+                                        android:textSize="10pt" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:id="@+id/pencil_icon"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="close"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/pencil" />
+                                    <ImageButton
+                                        android:id="@+id/add_icon"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="close"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/plus" />
+
+                                    <TextView
+                                        android:id="@+id/number_icon"
+                                        android:layout_width="0dp"
+                                        android:textSize="25sp"
+                                        android:gravity="center"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:background="@drawable/button3" />
+
+                                    <ImageButton
+                                        android:id="@+id/minus_icon"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="close"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/minus" />
+                                    <ImageButton
+                                        android:id="@+id/trash_icon"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="close"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/trashcan" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#DAB4BC" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/americano" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="6"
+                                    android:layout_marginBottom="5dp"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="0dp"
+                                        android:text="에스프레소\n1800원\n"
+                                        android:textColor="#000000"
+                                        android:textSize="10pt" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="close"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/pencil" />
+
+
+
+                                    <ImageButton
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="close"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/plus" />
+
+                                    <ImageView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="count"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/button3" />
+
+                                    <ImageButton
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="close"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/minus" />
+                                    <ImageButton
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="close"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/trashcan" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#DAB4BC" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/esfre" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="6"
+                                    android:layout_marginBottom="5dp"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="0dp"
+                                        android:text="에스프레소\n1800원\n"
+                                        android:textColor="#000000"
+                                        android:textSize="10pt" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="close"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/pencil" />
+
+
+
+                                    <ImageButton
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="close"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/plus" />
+
+                                    <ImageView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="count"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/button3" />
+
+                                    <ImageButton
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="close"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/minus" />
+                                    <ImageButton
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="close"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/trashcan" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#DAB4BC" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/esfre" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="6"
+                                    android:layout_marginBottom="5dp"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="0dp"
+                                        android:text="에스프레소\n1800원\n"
+                                        android:textColor="#000000"
+                                        android:textSize="10pt" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="close"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/pencil" />
+
+
+
+                                    <ImageButton
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="close"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/plus" />
+
+                                    <ImageView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="count"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/button3" />
+
+                                    <ImageButton
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="close"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/minus" />
+                                    <ImageButton
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="close"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/trashcan" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#DAB4BC" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/blank_forth"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1.3"
+        app:layout_constraintTop_toBottomOf="@id/confirm"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toTopOf="@id/blank"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1.2"
+        android:id="@+id/top2"
+        android:layout_height="0dp">
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="뒤로가기"
+            android:padding="1dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/imageView4"/>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintRight_toLeftOf="@id/imageButton6"
+            app:layout_constraintLeft_toRightOf="@id/imageButton4"
+            android:layout_marginStart="53dp"
+            android:contentDescription="관리자용 로그인창으로 이동"
+            android:scaleType="fitStart"
+            android:src="@drawable/image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="2dp"
+            android:contentDescription="관리자용 로그인창으로 이동"
+            android:padding="1dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/jump"
+            app:layout_constraintLeft_toRightOf="@id/imageButton6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
