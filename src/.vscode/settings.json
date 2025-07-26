@@ -1,0 +1,24 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/ict/Wook/GoSung_ws/build/yolov5",
+        "/home/ict/Wook/GoSung_ws/install/yolov5/lib/python3.10/site-packages",
+        "/home/ict/Wook/GoSung_ws/install/yolo_msgs/local/lib/python3.10/dist-packages",
+        "/home/ict/Wook/GoSung_ws/build/sensor_fusion",
+        "/home/ict/Wook/GoSung_ws/install/sensor_fusion/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/ict/Wook/GoSung_ws/build/yolov5",
+        "/home/ict/Wook/GoSung_ws/install/yolov5/lib/python3.10/site-packages",
+        "/home/ict/Wook/GoSung_ws/install/yolo_msgs/local/lib/python3.10/dist-packages",
+        "/home/ict/Wook/GoSung_ws/build/sensor_fusion",
+        "/home/ict/Wook/GoSung_ws/install/sensor_fusion/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "files.associations": {
+        "string": "cpp"
+    },
+    "ros.distro": "humble"
+}
